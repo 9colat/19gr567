@@ -1,3 +1,5 @@
+clear workspace
+
 truepose=[57.015766, 9.985115];
 
 
@@ -17,9 +19,29 @@ something=(Xbar+t_95*(S/sqrt(size(distarry,2))));
 close all
 figure
 plot(Latitude3/10000000)%,Longitude3/10000000)
+hold on
+title('A plot of the latitude data from the gps at 1 Hz')
+xlabel('Time [s]') 
+ylabel('Latitude') 
+hold off
 figure
 plot(Longitude3/10000000)
+hold on
+title('A plot of the longitude data from the gps at 1 Hz')
+xlabel('Time [s]') 
+ylabel('Longitude') 
+hold off
 figure
 plot(Latitude3/10000000,Longitude3/10000000)
+hold on
+title('A plot of the position data from the gps at 1 Hz')
+xlabel('Longitude') 
+ylabel('Latitude') 
+hold off
 figure
 plot(distarry)
+hold on
+title('The distance to the true GPS position')
+xlabel('Time [s]') 
+ylabel('Distance [m]') 
+hold off
